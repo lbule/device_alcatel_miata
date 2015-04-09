@@ -22,7 +22,24 @@ $(call inherit-product, build/target/product/full.mk)
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_miata
 PRODUCT_DEVICE := miata
+PRODUCT_CHARACTERISTICS := phone
 
 
 PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/fstab.miata:root/fstab.miata 
+
+
+# Screen density
+PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 960
+TARGET_SCREEN_WIDTH := 540
+
+# Charger
+PRODUCT_PACKAGES += \
+    charger \
+    charger_res_images
+
+

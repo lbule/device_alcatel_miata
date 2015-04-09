@@ -21,9 +21,18 @@ TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
 TARGET_BOOTLOADER_BOARD_NAME := miata
+
+# Kernel
+#TARGET_NO_KERNEL := true
+#TARGET_PREBUILT_KERNEL := device/alcatel/miata/kernel
+TARGET_KERNEL_SOURCE := kernel/alcatel/miata
+TARGET_KERNEL_CONFIG := miata_defconfig
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 androidboot.bootloader=L4EAV0V0AT00
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
+BOARD_MKBOOTIMG_ARGS := --dt device/alcatel/miata/dt.img
+#BOARD_KERNEL_SEPARATED_DT := true
+#BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 
 # fix this up by examining /proc/mtd on a running device
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x1000000
@@ -31,9 +40,6 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x1000000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x1C000000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x1609FBC00
 BOARD_FLASH_BLOCK_SIZE := 131072
-
-#TARGET_NO_KERNEL := true
-TARGET_PREBUILT_KERNEL := device/alcatel/miata/kernel
 
 # Recovery
 #BOARD_RECOVERY_SWIPE := true
@@ -51,21 +57,6 @@ BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 40
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
-
-
-#####################################
-BOARD_MKBOOTIMG_ARGS := --dt device/alcatel/miata/dt.img
-#BOARD_KERNEL_SEPARATED_DT := true
-#BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
-TARGET_KERNEL_SOURCE := kernel/alcatel/miata
-TARGET_KERNEL_CONFIG := miata_defconfig
-
-#PRODUCT_AAPT_CONFIG := ldpi mdpi hdpi xhdpi
-#PRODUCT_AAPT_PREF_CONFIG := hdpi
-#PRODUCT_CHARACTERISTICS := phone
-
-
-#####################################
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
