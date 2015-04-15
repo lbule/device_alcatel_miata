@@ -27,6 +27,8 @@
 
 # mount point	fstype		device			[device2] [length=]
 
+/dev/block/platform/msm_sdcc.1/by-name/boot         /boot           emmc    defaults                                                        defaults
+/dev/block/platform/msm_sdcc.1/by-name/recovery     /recovery       emmc    defaults                                                        defaults
 /dev/block/platform/msm_sdcc.1/by-name/system       /system         ext4    ro,barrier=1                                                    wait
 /dev/block/platform/msm_sdcc.1/by-name/custpack     /custpack       ext4    ro,barrier=1                                                    wait
 /dev/block/platform/msm_sdcc.1/by-name/cache        /cache          ext4    noatime,nosuid,nodev,barrier=1,data=ordered                     wait,check
@@ -34,8 +36,6 @@
 /dev/block/mmcblk1p1				     auto           auto    defaults                                   			    voldmanaged=sdcard1:1,noemulatedsd
 #/dev/block/mmcblk1p1                                /sdcard1        vfat    nosuid,nodev,barrier=1,data=ordered,nodelalloc                  wait
 #/dev/block/platform/msm_sdcc.1/by-name/persist      /persist        ext4    ro,barrier=1                                                    wait
-#/dev/block/platform/msm_sdcc.1/by-name/boot         /boot           emmc    defaults                                                        defaults
-#/dev/block/platform/msm_sdcc.1/by-name/recovery     /recovery       emmc    defaults                                                        defaults
 #/dev/block/platform/msm_sdcc.1/by-name/misc         /misc           emmc    defaults                                                        defaults
 #/dev/block/platform/msm_sdcc.1/by-name/modem        /firmware       vfat    defaults                                                        defaults
 #/dev/block/platform/msm_sdcc.1/by-name/sbl1         /sbl1           emmc    defaults                                                        defaults
