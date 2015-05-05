@@ -21,6 +21,7 @@ TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
 TARGET_BOOTLOADER_BOARD_NAME := miata
+DEVICE_RESOLUTION := 540x960
 
 # Kernel
 #TARGET_NO_KERNEL := true
@@ -96,6 +97,7 @@ BOARD_SEPOLICY_UNION += \
     rmt.te \
     sdcard_internal.te \
     sdcardd.te \
+    seapp_contexts \
     sensors.te \
     shell.te \
     surfaceflinger.te \

@@ -43,3 +43,9 @@ PRODUCT_PACKAGES += \
     charger_res_images
 
 
+# Wifi
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+
+
+
