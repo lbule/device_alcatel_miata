@@ -64,10 +64,7 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-	device/alcatel/miata/sepolicy
-
-#BOARD_SEPOLICY_REPLACE += \
-#	file_contexts
+	$(LOCAL_PATH)/sepolicy
 
 BOARD_SEPOLICY_UNION += \
 	adbd.te \
@@ -91,7 +88,6 @@ BOARD_SEPOLICY_UNION += \
 	netd.te \
 	netmgrd.te \
 	nfc.te \
-	property_contexts \
 	property.te \
 	qcom.te \
 	qmux.te \
@@ -114,3 +110,5 @@ BOARD_SEPOLICY_UNION += \
 	su.te
 
 
+#Egl
+BOARD_EGL_CFG := $(LOCAL_PATH)/egl.cfg
