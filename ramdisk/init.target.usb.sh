@@ -87,6 +87,7 @@ esac
 baseband=`getprop ro.baseband`
 echo 1  > /sys/class/android_usb/f_mass_storage/lun/nofua
 usb_config=`getprop persist.sys.usb.config`
+sw_type=`getprop ro.debuggable`
 case "$usb_config" in
     "" | "adb") #USB persist config not set, select default configuration
         case $target in
@@ -100,7 +101,21 @@ case "$usb_config" in
                     ;;
                     *)
                          #setprop persist.sys.usb.config default,mass_storage,diag,serial_smd,serial_tty,adb
-                         setprop persist.sys.usb.config mtp,adb
+                         #[BUGFIX]-Add-BEGIN by TSCD.yubo.feng,07/08/2014,713527,715023
+                         #setprop persist.sys.usb.config mtp,adb
+                         #[BUGFIX]-Add-END by TSCD.yubo.feng,07/08/2014,713527,715023
+                         #[FEATURE]-Add-BEGIN by TCTNB.93391,08/26/2014,751013,Diag Protect
+                         case "$sw_type" in
+                           1)
+                                   setprop persist.sys.usb.config mtp,adb
+                                   setprop persist.sys.usb.protect 0
+                                   ;;
+                           0)
+                                   setprop persist.sys.usb.config mtp,default
+                                   setprop persist.sys.usb.protect 1
+                                   ;;
+                         esac
+                         #[FEATURE]-Add-END by TCTNB.93391,08/26/2014,751013,Diag Protect
                     ;;
                 esac
             ;;
@@ -134,7 +149,19 @@ case "$usb_config" in
                     ;;
                     *)
                          #setprop persist.sys.usb.config default,mass_storage,diag,serial_smd,serial_tty
-                         setprop persist.sys.usb.config mtp
+                         #[FEATURE]-Add-BEGIN by TCTNB.93391,08/26/2014,751013,Diag Protect
+                         #setprop persist.sys.usb.config mtp
+                         case "$sw_type" in
+                           1)
+                                   setprop persist.sys.usb.config mtp,adb
+                                   setprop persist.sys.usb.protect 0
+                                   ;;
+                           0)
+                                   setprop persist.sys.usb.config mtp,default
+                                   setprop persist.sys.usb.protect 1
+                                   ;;
+                         esac
+                         #[FEATURE]-Add-END by TCTNB.93391,08/26/2014,751013,Diag Protect
                     ;;
                 esac
             ;;
