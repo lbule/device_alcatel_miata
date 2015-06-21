@@ -282,3 +282,46 @@ etc/firmware/venus.mdt
 
 # WiFi
 bin/ptt_socket_app
+
+# 6036Y
+bin/usbhub_init
+bin/qcom-system-daemon
+bin/cnd
+bin/wcnss_filter
+bin/dun-server
+bin/sapd
+bin/ftmdaemon
+bin/bridgemgrd
+bin/port-bridge
+bin/qmiproxy
+bin/sensors.qcom
+bin/gpsone_daemon
+bin/quipc_igsn
+bin/quipc_main
+bin/lowi-server
+bin/drmdiagapp
+bin/ATFWD-daemon
+bin/ds_fmc_appd
+bin/ssr_diag
+bin/charger_monitor
+bin/diag_mdlog
+etc/init.qcom.bt.sh
+etc/init.ath3k.bt.sh
+etc/init.qcom.coex.sh
+etc/init.qcom.fm.sh
+etc/wifi/p2p_supplicant_overlay.conf
+etc/wifi/p2p_supplicant.conf
+etc/wifi/wpa_supplicant_overlay.conf
+etc/wifi/wpa_supplicant.conf
+etc/init.qcom.post_boot.sh
+etc/init.qcom.sdio.sh
+etc/init.crda.sh
+etc/hcidump.sh
+etc/init.qcom.pppoe.connect.sh
+etc/init.qcom.pppoe.disconnect.sh
+etc/init.qcom.pppoe.route_dns.sh
+
+
+
+
+

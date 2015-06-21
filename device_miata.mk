@@ -86,14 +86,14 @@ PRODUCT_PACKAGES += \
 #PRODUCT_COPY_FILES += \
 #    $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
-PRODUCT_COPY_FILES += \
+XPRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/ramdisk/init.qcom.rc:root/init.qcom.rc \
 	$(LOCAL_PATH)/ramdisk/init.qcom.sh:root/init.qcom.sh \
 	$(LOCAL_PATH)/ramdisk/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
-	$(LOCAL_PATH)/ramdisk/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
+	$(LOCAL_PATH)/ramdisk/init.class_main.sh:root/init.class_main.sh \
 	$(LOCAL_PATH)/ramdisk/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
 	$(LOCAL_PATH)/ramdisk/init.qcom.factory.sh:root/init.qcom.factory.sh \
-	$(LOCAL_PATH)/ramdisk/init.qcom.ril.sh:root/init.qcom.ril.sh \
+#	$(LOCAL_PATH)/ramdisk/init.qcom.ril.sh:root/init.qcom.ril.sh \
 	$(LOCAL_PATH)/ramdisk/init.qcom.ssr.sh:root/init.qcom.ssr.sh \
 	$(LOCAL_PATH)/ramdisk/init.target.rc:root/init.target.rc \
 	$(LOCAL_PATH)/ramdisk/init.target.usb.rc:root/init.target.usb.rc \
@@ -125,7 +125,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true \
     qcom.hw.aac.encoder=true \
     ro.qualcomm.cabl=0 \
-#    ro.vendor.extension_library=/vendor/lib/libqc-opt.so
+    ro.vendor.extension_library=/vendor/lib/libqc-opt.so
 
 
 
