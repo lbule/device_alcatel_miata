@@ -6,7 +6,8 @@ VENDOR=alcatel
 DEVICE=miata
 
 if [ $# -eq 0 ]; then
-  SRC=adb
+	SRC=~/aosp/stock/kk
+#  SRC=adb
 else
   if [ $# -eq 1 ]; then
     SRC=$1
@@ -42,4 +43,4 @@ for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^- | grep -v ^$ | 
 
 done
 
-#./setup-makefiles.sh
+./setup-makefiles.sh

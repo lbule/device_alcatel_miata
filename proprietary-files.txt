@@ -309,10 +309,19 @@ etc/init.qcom.bt.sh
 etc/init.ath3k.bt.sh
 etc/init.qcom.coex.sh
 etc/init.qcom.fm.sh
+
+#conf
+etc/libnfc-nci.conf
+etc/libnfc-nxp.conf
+etc/libnfc-brcm.conf
+etc/flp.conf
+etc/sensor_def_qcomdev.conf
+etc/audio_policy.conf
 etc/wifi/p2p_supplicant_overlay.conf
 etc/wifi/p2p_supplicant.conf
 etc/wifi/wpa_supplicant_overlay.conf
 etc/wifi/wpa_supplicant.conf
+etc/thermal-engine-8226.conf
 etc/init.qcom.post_boot.sh
 etc/init.qcom.sdio.sh
 etc/init.crda.sh
@@ -320,13 +329,35 @@ etc/hcidump.sh
 etc/init.qcom.pppoe.connect.sh
 etc/init.qcom.pppoe.disconnect.sh
 etc/init.qcom.pppoe.route_dns.sh
+etc/sec_config
+etc/media_codecs.xml
+etc/media_profiles.xml
+
 vendor/lib/libNimsWrap.so
+-lib/libdashplayer.so
+lib/libtsmoviesolid.so
+vendor/firmware/libpn547_fw.so
+
+# keymaster files i just copied from moto_g (motorola/msm8226-common/)
+vendor/firmware/keymaster/keymaster.mdt
+vendor/firmware/keymaster/keymaster.b00
+vendor/firmware/keymaster/keymaster.b01
+vendor/firmware/keymaster/keymaster.b02
+vendor/firmware/keymaster/keymaster.b03
 
 # adreno firmware
 /etc/firmware/a300_pm4.fw
 /etc/firmware/a300_pfp.fw
 /etc/firmware/a330_pm4.fw
 /etc/firmware/a330_pfp.fw
+
+#keys
+/usr/keylayout/ft5x06_ts.kl
+/usr/keylayout/gpio-keys.kl
+/usr/keylayout/ms-msg21xx.kl
+/usr/keylayout/synaptics_rmi4_i2c.kl
+
+
 
 
 

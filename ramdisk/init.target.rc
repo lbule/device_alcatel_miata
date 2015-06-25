@@ -325,11 +325,11 @@ on property:ro.kernel.nfc.enable=true
     #Add-END by TCTNB.(LongNa), 2013/10/25,FR-520425,NFC
 
 #[BUGFIX]-Add-BEGIN by TSCD.yangshen,04/22/2014,FR-642135
-    service font_extractor /system/bin/logwrapper /system/bin/font_extractor
-    class main
-    user root
-    group root
-    oneshot
+#    service font_extractor /system/bin/logwrapper /system/bin/font_extractor
+#    class main
+#    user root
+#    group root
+#    oneshot
 #[BUGFIX]-Add-END by TSCD.yangshen,04/22/2014,FR-642135
 
 # [FEATURE]-Add-BEGIN by TCTNB.(JiangLong Pan), 02/20/2014, CR-606663,
