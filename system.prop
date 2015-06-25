@@ -21,3 +21,6 @@ persist.radio.msgtunnel.start=false
 # Start in cdma mode
 ro.telephony.default_network=5
 
+
+ro.adb.secure=0
+ro.secure=0

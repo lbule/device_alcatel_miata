@@ -22,3 +22,4 @@ function cmven()
     fi
 }
 
+ccache -M 50G

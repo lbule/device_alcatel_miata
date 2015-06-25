@@ -320,6 +320,7 @@ etc/hcidump.sh
 etc/init.qcom.pppoe.connect.sh
 etc/init.qcom.pppoe.disconnect.sh
 etc/init.qcom.pppoe.route_dns.sh
+vendor/lib/libNimsWrap.so
 
 # adreno firmware
 /etc/firmware/a300_pm4.fw
