@@ -9,6 +9,7 @@ vendor/lib/rfsa/adsp/libadsp_denoise_skel.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
+vendor/lib/rfsa/adsp/libapps_mem_heap.so
 
 # Audio
 etc/Bluetooth_cal.acdb
@@ -33,7 +34,7 @@ vendor/lib/libbtnv.so
 
 # Camera
 bin/mm-qcamera-daemon
-lib/hw/camera.msm8226.so
+-lib/hw/camera.msm8226.so
 -lib/libchromatix_ar0543_common.so
 -lib/libchromatix_ar0543_default_video.so
 -lib/libchromatix_ar0543_hfr_60.so
@@ -80,10 +81,10 @@ etc/firmware/cpp_firmware_v1_2_0.fw
 
 # DRM
 bin/qseecomd
-vendor/lib/libdrmdecrypt.so
 lib/libWVphoneAPI.so
 vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/libdrmdecrypt.so
 vendor/lib/libdrmdiag.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
@@ -344,12 +345,6 @@ vendor/firmware/keymaster/keymaster.b00
 vendor/firmware/keymaster/keymaster.b01
 vendor/firmware/keymaster/keymaster.b02
 vendor/firmware/keymaster/keymaster.b03
-
-# adreno firmware
-/etc/firmware/a300_pm4.fw
-/etc/firmware/a300_pfp.fw
-/etc/firmware/a330_pm4.fw
-/etc/firmware/a330_pfp.fw
 
 #keys
 /usr/keylayout/ft5x06_ts.kl

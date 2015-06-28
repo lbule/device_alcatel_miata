@@ -102,11 +102,11 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    liboverlay \
     copybit.msm8226 \
     gralloc.msm8226 \
     hwcomposer.msm8226 \
-    memtrack.msm8226 
+    memtrack.msm8226 \
+    liboverlay
 
 # Keystore
 PRODUCT_PACKAGES += \
@@ -154,9 +154,26 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.ssr.restart_level=3 \
     wifi.interface=wlan0
     
+#PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.usb.config=mtp
+#PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.service.adb.enable=1
+#PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=0
+#PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.secure=0
+#PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.allow.mock.location=1
+#PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.debuggable=1   
+
+# Camera
 PRODUCT_PACKAGES += \
-	audio.a2dp.default \
-	audio.usb.default
+    libxml2 \
+    libqomx_core \
+    camera.msm8226
+    
+# Audio 
+PRODUCT_PACKAGES += \
+	audio.primary.msm8226 \
+    audio_policy.msm8226 \
+    audio.a2dp.default \
+    audio.r_submix.default \
+    audio.usb.default
 	
 # Omx
 PRODUCT_PACKAGES += \
