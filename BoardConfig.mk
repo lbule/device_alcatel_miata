@@ -95,50 +95,49 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-	$(LOCAL_PATH)/sepolicy
+	device/alcatel/miata/sepolicy
 
 BOARD_SEPOLICY_UNION += \
-	adbd.te \
-	app.te \
-	bluetooth_loader.te \
-	bridge.te \
-	camera.te \
-	device.te \
-	dhcp.te \
-	dnsmasq.te \
-	domain.te \
-	drmserver.te \
-	file.te \
-	file_contexts \
-	hostapd.te \
-	init_shell.te \
-	init.te \
-	libqc-opt.te \
-	mediaserver.te \
-	mpdecision.te \
-	netd.te \
-	netmgrd.te \
-	nfc.te \
-	property.te \
-	qcom.te \
-	qmux.te \
-	radio.te \
-	rild.te \
-	rmt.te \
-	sdcard_internal.te \
-	sdcardd.te \
-	seapp_contexts \
-	sensors.te \
-	shell.te \
-	surfaceflinger.te \
-	system.te \
-	tee.te \
-	te_macros \
-	thermald.te \
-	ueventd.te \
-	vold.te \
-	wpa_supplicant.te \
-	su.te
+adbd.te \
+app.te \
+bluetooth_loader.te \
+bridge.te \
+camera.te \
+device.te \
+dhcp.te \
+dnsmasq.te \
+domain.te \
+file.te \
+file_contexts \
+hostapd.te \
+init_shell.te \
+init.te \
+libqc-opt.te \
+mediaserver.te \
+mpdecision.te \
+netd.te \
+netmgrd.te \
+nfc.te \
+property.te \
+qcom.te \
+qmux.te \
+radio.te \
+rild.te \
+rmt.te \
+sdcard_internal.te \
+sdcardd.te \
+seapp_contexts \
+sensors.te \
+shell.te \
+surfaceflinger.te \
+system.te \
+tee.te \
+te_macros \
+thermald.te \
+ueventd.te \
+vold.te \
+wpa_supplicant.te \
+su.te
 
 
 #TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
@@ -159,8 +158,8 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 #BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/HighScreen/D10A_HighScreen/bluetooth
 
 # Camera
-USE_CAMERA_STUB := true
-#USE_DEVICE_SPECIFIC_CAMERA := true
+#USE_CAMERA_STUB := true
+USE_DEVICE_SPECIFIC_CAMERA := true
 #COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
 # CMHW
@@ -202,15 +201,18 @@ TARGET_POWERHAL_VARIANT := qcom
 # Display
 BOARD_EGL_CFG := $(LOCAL_PATH)/egl.cfg
 TARGET_QCOM_DISPLAY_VARIANT := caf
-#TARGET_USES_C2D_COMPOSITION := true
-#TARGET_USES_ION := true
-#USE_OPENGL_RENDERER := true
-#TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
-#NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-#TARGET_DISPLAY_INSECURE_MM_HEAP := true
-DEVICE_RESOLUTION := 540x960
+TARGET_USES_C2D_COMPOSITION := true
+TARGET_USES_ION := true
+USE_OPENGL_RENDERER := true
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+OVERRIDE_RS_DRIVER := libRSDriver_adreno
 
-#ADDITIONAL_DEFAULT_PROPERTIES += \
-#	ro.secure=0 \
-#	ro.debuggable=1 \
-#	ro.adb.secure=0
+TARGET_HAVE_HDMI_OUT := false
+TARGET_USES_OVERLAY := true
+TARGET_HARDWARE_3D := false
+TARGET_USE_KINGFISHER_OPTIMIZATION := true
+#TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
+#TARGET_DISPLAY_INSECURE_MM_HEAP := true
+#DEVICE_RESOLUTION := 540x960
+
+
